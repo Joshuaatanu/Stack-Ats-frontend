@@ -9,11 +9,13 @@ export default function AdminDash() {
         <div class="col-span-1 bg-admin rounded-[30px] shadow-vague h-[98vh] my-auto">
           <div class="icons flex flex-col mt-10">
             {/* <!-- logo --> */}
-            <img
-              src="src/images/small-logo.svg"
-              alt="small logo"
-              class="w-8 m-auto"
-            />
+            <a href="/">
+              <img
+                src="src/images/small-logo.svg"
+                alt="small logo"
+                class="w-8 m-auto"
+              />
+            </a>
 
             <div class="other-icons mt-2 my-auto">
               {/* <!-- dashboard icon --> */}
@@ -28,16 +30,18 @@ export default function AdminDash() {
               </a>
 
               {/* <!-- all applications icon --> */}
-             
-                <div class="mt-8">
-                  <a href="/applications"> <img
+
+              <div class="mt-8">
+                <a href="/applications">
+                  {" "}
+                  <img
                     src="src/images/admin-icons/all-applications.svg"
                     class="m-auto"
                     alt="dashboard-icon"
-                  /></a>
+                  />
+                </a>
+              </div>
 
-                </div>
-              
               {/* <!-- rejected applications icon --> */}
               <a href="">
                 <div class="mt-8">
@@ -64,13 +68,12 @@ export default function AdminDash() {
             {/* <!-- logout icon --> */}
             <div class="mt-64 m-auto">
               <a href="/admin-login">
-                 <img
-                src="src/images/dashboard-icons/log-out.svg"
-                class="m-auto"
-                alt="dashboard-icon"
-              />
+                <img
+                  src="src/images/dashboard-icons/log-out.svg"
+                  class="m-auto"
+                  alt="dashboard-icon"
+                />
               </a>
-             
             </div>
           </div>
         </div>

@@ -13,12 +13,12 @@ export default function Home() {
               <h1 className="text-slate-700 font-bold text-4xl">
                 Streamline Your School's Admissions Process with StackATS
               </h1>
-              <p className="text-slate-500/70 text-lg mt-5">
+              <p className="text-slate-500/70 text-lg mt-5 pb-10 ">
                 Manage your school's admissions with ease using StackATS. Our
                 platform simplifies the application process, saving you time and
                 effort.
               </p>
-              <a href="/register" className="mt-5 text-white btn">
+              <a href="/register" className="mt-5  text-white btn">
                 Get Started Today
               </a>
             </div>
@@ -161,18 +161,18 @@ export default function Home() {
         >
           <div className="grid items-center grid-cols-1 md:grid-cols-2 px-8 md:p-10">
             {/* <!-- text --> */}
-            <div className="mt-10 md:mt-20 lg:mt-0 mb-20 lg:mb-0 lg:items-center w-full text-white my-auto">
+            <div className="mt-10 md:mt-20 lg:mt-0 mb-20 lg:mb-0 lg:items-center w-full  text-white my-auto">
               <h1 className="font-semibold text-4xl">
                 Get Started With StackATS Today
               </h1>
-              <p className="text-lg mt-5 md:text-sm">
+              <p className="text-lg mt-5  pb-10 md:text-sm">
                 Ready to streamline your school's admissions process? Sign up
                 for StackATS today and experience the benefits of a modern,
                 user-friendly admissions management system.
               </p>
               <a
                 href="/register"
-                className="mt-6 text-sky-400 rounded-full bg-white p-4 font-semibold"
+                className="mt-4 text-sky-400 rounded-full bg-white p-4 font-semibold"
               >
                 Get Started Today
               </a>
