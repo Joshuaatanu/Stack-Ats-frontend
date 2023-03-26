@@ -99,11 +99,14 @@ export default function StudentDash() {
 
             {/* <!-- logout icon --> */}
             <div className="mt-16 m-auto">
-              <img
+              <a href="/login">
+                <img
                 src="src/images/dashboard-icons/log-out.svg"
                 className="m-auto"
                 alt="dashboard-icon"
               />
+              </a>
+              
             </div>
           </div>
         </div>

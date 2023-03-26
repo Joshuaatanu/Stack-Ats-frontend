@@ -16,7 +16,7 @@ export default function AppAll() {
             />
             <div class="other-icons mt-2 my-auto">
               {/* <!-- dashboard icon --> */}
-              <a href="admindashboard.html">
+              <a href="/admin">
                 <div class="mt-12">
                   <img
                     src="src/images/admin-icons/dashboard.svg"
@@ -27,7 +27,7 @@ export default function AppAll() {
               </a>
 
               {/* <!-- all applications icon --> */}
-              <a href="all-applications.html">
+              <a href="/applications">
                 <div class="mt-8 px-2 py-4 bg-sky-100/30 w-10/12 m-auto rounded-xl ">
                   <img
                     src="src/images/admin-icons/all-applications.svg"
@@ -61,11 +61,14 @@ export default function AppAll() {
             </div>
             {/* <!-- logout icon --> */}
             <div class="mt-64 m-auto">
-              <img
+              <a href="/admin-login">
+                <img
                 src="src/images/dashboard-icons/log-out.svg"
                 class="m-auto"
                 alt="dashboard-icon"
               />
+              </a>
+              
             </div>
             
           </div>
@@ -132,7 +135,7 @@ export default function AppAll() {
               </div>
 
               {/* <!-- an applicant 1 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -161,7 +164,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 2 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -190,7 +193,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 3 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -219,7 +222,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 4 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -248,7 +251,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 5 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -277,7 +280,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 6 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>
@@ -306,7 +309,7 @@ export default function AppAll() {
               {/* <!-- end of applicant --> */}
 
               {/* <!-- an applicant 7 --> */}
-              <a href="application-details.html">
+              <a href="/application-details">
                 <div class="flex gap-4 mt-6 p-3 rounded-xl border border-slate-200">
                   {/* <!-- picture --> */}
                   <div class="picture my-auto bg-zinc-200 w-20 rounded-md h-16"></div>

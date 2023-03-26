@@ -26,7 +26,7 @@ export default function Login() {
                             Login with your valid credentials.
                         </p>
 
-                        <form action="" className="mt-10 pb-10">
+                        <form action="/student" className="mt-10 pb-10">
                             <div className="mt-3">
                                 <label for="">Email</label> <br/>
                                 <input type="email" placeholder="123@example.com"
@@ -39,7 +39,7 @@ export default function Login() {
                             </div>
                             <div className="mt-3">
                                 <label for="">Confirm Password</label> <br/>
-                                <input type="number" placeholder="123-345-456"
+                                <input type="password" placeholder="123-345-456"
                                     className="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"/>
                             </div>
                             <div className="mt-8">

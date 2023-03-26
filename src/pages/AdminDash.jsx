@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AdminDash() {
   return (
-    <div>
+    <div class="bg-[#fafafa] w-[80%] mx-auto">
       {/* <!-- dashboard body --> */}
       <div class="grid grid-cols-12 gap-5">
         {/* <!-- sidebar --> */}
@@ -28,16 +28,16 @@ export default function AdminDash() {
               </a>
 
               {/* <!-- all applications icon --> */}
-              <a href="">
+             
                 <div class="mt-8">
-                  <img
+                  <a href="/applications"> <img
                     src="src/images/admin-icons/all-applications.svg"
                     class="m-auto"
                     alt="dashboard-icon"
-                  />
-                </div>
-              </a>
+                  /></a>
 
+                </div>
+              
               {/* <!-- rejected applications icon --> */}
               <a href="">
                 <div class="mt-8">
@@ -63,11 +63,14 @@ export default function AdminDash() {
 
             {/* <!-- logout icon --> */}
             <div class="mt-64 m-auto">
-              <img
+              <a href="/admin-login">
+                 <img
                 src="src/images/dashboard-icons/log-out.svg"
                 class="m-auto"
                 alt="dashboard-icon"
               />
+              </a>
+             
             </div>
           </div>
         </div>
@@ -133,7 +136,7 @@ export default function AdminDash() {
 
                 {/* <!-- button --> */}
                 <div class="w-3/12 my-auto">
-                  <a href="all-applications.html">
+                  <a href="/applications">
                     <button class="bg-admin text-white px-8 py-3 rounded-full">
                       View all
                     </button>

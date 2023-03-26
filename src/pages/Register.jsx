@@ -22,7 +22,7 @@ export default function () {
                   Register to be eligible for application.
                 </p>
 
-                <form action="" class="mt-10 pb-10">
+                <form action="/student" class="mt-10 pb-10">
                   <div class="mt-3">
                     <label for="">Email</label> <br />
                     <input
@@ -56,7 +56,8 @@ export default function () {
                     />
                   </div>
                   <div class="mt-8">
-                    <button class="btn w-11/12 text-white p-5">Register</button>
+                <button class="btn w-11/12 text-white p-5">Register</button>
+                    
                   </div>
                 </form>
               </div>

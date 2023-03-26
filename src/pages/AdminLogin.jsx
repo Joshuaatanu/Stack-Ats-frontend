@@ -25,7 +25,7 @@ export default function AdminLogin() {
                             Login with your valid credentials.
                         </p>
 
-                        <form action="" className="mt-10 pb-10">
+                        <form action="/admin" className="mt-10 pb-10">
                             <div className="mt-3">
                                 <label for="">Email</label> <br/>
                                 <input type="email" placeholder="123@example.com"
