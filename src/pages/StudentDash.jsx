@@ -1,0 +1,298 @@
+import React from 'react'
+
+export default function StudentDash() {
+  return (
+      <div className="bg-[#fafafa] w-[80%] mx-auto">
+          <div className="grid grid-cols-12 gap-5">
+
+
+    {/* <!-- sidebar --> */}
+    <div className="col-span-1 bg-sky-400 rounded-[30px] shadow-vague h-[98vh] my-auto">
+
+
+
+      <div className="icons flex flex-col mt-10">
+
+        {/* <!-- logo --> */}
+        <img src="src/images/small-logo.svg" alt="small logo" className="w-8 m-auto"/>
+
+
+
+        <div className="other-icons mt-2 my-auto">
+
+          {/* <!-- dashboard icon --> */}
+          <a href="">
+            <div className="mt-12 px-2 py-4 bg-sky-100/30 w-10/12 m-auto rounded-xl ">
+              <img src="src/images/dashboard-icons/dashboard-tab-active.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- archive icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/archive-book.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- chats icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/chats.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- schedule(menu) icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/menu-board.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- chart icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/chart-2.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- settings icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/setting.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+          {/* <!-- business icon --> */}
+          <a href="">
+            <div className="mt-8">
+              <img src="src/images/dashboard-icons/book-1.svg" className="m-auto" alt="dashboard-icon"/>
+            </div>
+          </a>
+
+        </div>
+
+        {/* <!-- logout icon --> */}
+        <div className="mt-16 m-auto">
+          <img src="src/images/dashboard-icons/log-out.svg" className="m-auto" alt="dashboard-icon"/>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    {/* <!-- end of sidebar --> */}
+
+
+
+    <div className="col-span-11 gap-16 p-2 h-screen overflow-y-scroll">
+      {/* <!-- main content --> */}
+      <main>
+        {/* <!-- navbar --> */}
+        <div className="grid grid-row-1 row-span-full bg-white p-4 rounded-[30px] shadow-vague">
+          <div className="flex justify-between">
+            {/* <!-- dashboard text --> */}
+            <div className="my-auto">
+              <h1 className="text-2xl font-semibold opacity-60 tracking-tighter">
+                Dashboard
+              </h1>
+            </div>
+
+            {/* <!-- navbar options/ icons --> */}
+            <div className="flex flex-wrap space-x-6">
+              {/* <!-- messages --> */}
+              <button className="border relative border-slate-200 rounded-full p-3">
+                <div className="blue-dot absolute p-1 bg-sky-400 rounded-full top-0 right-2"></div>
+                <img src="src/dashboard-icons/message.svg" alt="" />
+              </button>
+              {/* <!-- notifications --> */}
+
+              <button className="border border-slate-200 rounded-full p-3">
+                <img src="src/dashboard-icons/notification.svg" alt="" />
+              </button>
+
+              {/* <!-- profile --> */}
+              <div className="">
+                <img src="src/images/user.jpg" className="h-12 w-12 object-cover rounded-full" alt="user-image" />
+              </div>
+            </div>
+            {/* <!-- end of navbar options --> */}
+          </div>
+        </div>
+
+        {/* <!-- status --> */}
+        <div className="grid grid-row-1 mt-3 row-span-full bg-white px-5 py-8 rounded-[30px] shadow-vague">
+          <div className="grid grid-row-2 row-span-full gap-1">
+            {/* <!-- row 1 --> */}
+            <div className="flex justify-between">
+              <h1 className="text-xl font-bold">Status</h1>
+
+              {/* <!-- last checked --> */}
+              <div className="last-checked text-xs text-gray-400 my-auto">
+                <span>Last checked : </span>
+                <b>13<sup>th</sup> March, 2023</b>
+              </div>
+            </div>
+
+            {/* <!-- row 2 --> */}
+            <div className="flex justify-between mt-2">
+              <p className="w-6/12 text-sm text-gray-400 mt-2 my-auto">
+                Your application is undergoing the screening and assessment
+                process. Please be patient with us, as your results will be
+                available soon.
+              </p>
+
+              {/* <!-- grey badge here --> */}
+              <div className="status badge my-auto text-center">
+                <div className="badge bg-gray-100 text-gray-500 px-14 py-3 font-semibold rounded-full w-full text-1xl">
+                  Pending
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- application --> */}
+        <div className="grid grid-row-1 mt-3 row-span-full bg-white p-5 rounded-[30px] shadow-vague">
+          <h2 className="font-bold text-xl">My Application</h2>
+          <p className="w-6/12 text-sm text-gray-400 mt-2 my-auto">
+            Fill in the inputs with valid information to successfully apply.
+          </p>
+
+          <hr className="opacity-60 my-5" />
+
+          <div className="grid grid-cols-6">
+            {/* <!-- col 1 --> */}
+            <div className="col-start-1 col-span-4">
+              {/* <!-- student form --> */}
+
+              <div className="grid grid-cols-4">
+                <div className="col-start-1 col-span-2">
+                  <h1 className="font-bold px-5 text-1xl my-5">Student's Form</h1>
+
+                  <form action="" className="px-5">
+                    {/* <!-- full name --> */}
+                    <div className="full-name grid grid-cols-2 gap-2">
+                      <div className="">
+                        <label className="text-xs" for="">First Name</label>
+                        <br />
+                        <input type="text" placeholder="John"
+                          className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                      </div>
+                      <div className="">
+                        <label className="text-xs" for="">Last Name</label> <br />
+                        <input type="text" placeholder="Doe"
+                          className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                      </div>
+                    </div>
+
+                    {/* <!-- email --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Email</label> <br />
+                      <input type="email" placeholder="123@example.com"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+
+                    {/* <!-- password --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Password</label> <br />
+                      <input type="password" placeholder="************"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+
+                    {/* <!-- phone number --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Phone Number</label>
+                      <br />
+                      <input type="tel" placeholder="123-345-567"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+
+                    {/* <!-- address --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Address</label> <br />
+                      <textarea name="" id="" cols="30" rows="10" placeholder="Add Address heresrc."
+                        className="resize-none font-bold w-full p-3 mt-2 text-xs pl-3 rounded-lg bg-zinc-50 border border-zinc-200 outline-none"></textarea>
+                    </div>
+
+                    {/* <!-- course --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Course</label> <br />
+                      <input type="" placeholder="123@example.com"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+                  </form>
+                </div>
+
+
+
+                {/* <!-- guardin's form --> */}
+
+                <div className="col-start-3 col-span-2 px-3">
+                  <h1 className="font-bold text-1xl my-5">Guardian's Form</h1>
+
+                  <form action="" className="w-full">
+                    {/* <!-- full name --> */}
+                    <div className="full-name grid grid-cols-2 gap-2">
+                      <div className="">
+                        <label className="text-xs" for="">First Name</label>
+                        <br />
+                        <input type="text" placeholder="John"
+                          className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                      </div>
+                      <div className="">
+                        <label className="text-xs" for="">Last Name</label> <br />
+                        <input type="text" placeholder="Doe"
+                          className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                      </div>
+                    </div>
+
+                    {/* <!-- email --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Email</label> <br />
+                      <input type="email" placeholder="123@example.com"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+
+                    {/* <!-- phone number --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Phone Number</label>
+                      <br />
+                      <input type="tel" placeholder="123-345-567"
+                        className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none" />
+                    </div>
+
+                    {/* <!-- address --> */}
+                    <div className="mt-3">
+                      <label className="text-xs" for="">Address</label> <br />
+                      <textarea name="" id="" cols="30" rows="10" placeholder="Add Address heresrc."
+                        className="resize-none font-bold w-full p-3 mt-2 text-xs pl-3 rounded-lg bg-zinc-50 border border-zinc-200 outline-none"></textarea>
+                    </div>
+                    {/* <!-- submit button --> */}
+                    <div className="mt-5">
+                      <a href="submitteddashboard.html"
+                        className="btn text-white font-semibold px-36 rounded-full">Submit</a>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- col 2 --> */}
+            <div className="m-auto col-start-5 col-span-2">
+              {/* <!-- illustration here --> */}
+              <img src="src/images/dashboard-illustration.svg" alt="dashboard illustration" className="w-full" />
+              <p className="text-sm italic text-gray-500 text-center mt-5">Your application is being reviewed</p>
+
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+    </div>
+  )
+}
