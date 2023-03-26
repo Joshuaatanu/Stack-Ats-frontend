@@ -120,7 +120,7 @@ export default function AppDetails() {
             {/* <!-- col 1 (applications) --> */}
             <div class="col-span-full bg-white shadow-vague rounded-[30px] p-8">
               {/* <!-- link to go back --> */}
-              <a href="all-applications.html">
+              <a href="/applications">
                 <div class="text-zinc-500 text-sm my-6">
                   <p>
                     {" "}
