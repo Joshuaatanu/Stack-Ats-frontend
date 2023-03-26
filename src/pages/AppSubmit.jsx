@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function StudentDash() {
+export default function AppSubmit() {
   return (
     <div className="bg-[#fafafa] w-[80%] mx-auto">
       <div className="grid grid-cols-12 gap-5">
@@ -8,9 +8,7 @@ export default function StudentDash() {
         <div className="col-span-1 bg-sky-400 rounded-[30px] shadow-vague h-[98vh] my-auto">
           <div className="icons flex flex-col mt-10">
             {/* <!-- logo --> */}
-
             <a href="/">
-              {" "}
               <img
                 src="src/images/small-logo.svg"
                 alt="small logo"
@@ -20,7 +18,7 @@ export default function StudentDash() {
 
             <div className="other-icons mt-2 my-auto">
               {/* <!-- dashboard icon --> */}
-              <a href="">
+              <a href="/student">
                 <div className="mt-12 px-2 py-4 bg-sky-100/30 w-10/12 m-auto rounded-xl ">
                   <img
                     src="src/images/dashboard-icons/dashboard-tab-active.svg"
@@ -108,8 +106,6 @@ export default function StudentDash() {
           </div>
         </div>
 
-        {/* <!-- end of sidebar --> */}
-
         <div className="col-span-11 gap-16 p-2 h-screen overflow-y-scroll">
           {/* <!-- main content --> */}
           <main>
@@ -186,8 +182,8 @@ export default function StudentDash() {
             {/* <!-- application --> */}
             <div className="grid grid-row-1 mt-3 row-span-full bg-white p-5 rounded-[30px] shadow-vague">
               <h2 className="font-bold text-xl">My Application</h2>
-              <p className="w-6/12 text-sm text-gray-400 mt-2 my-auto">
-                Fill in the inputs with valid information to successfully apply.
+              <p className="w-6/12 text-sm text-green-400 mt-2 my-auto">
+                Your application was successfully submitted.
               </p>
 
               <hr className="opacity-60 my-5" />
@@ -205,28 +201,25 @@ export default function StudentDash() {
 
                       <form action="" className="px-5">
                         {/* <!-- full name --> */}
-                        <div className="full-name grid grid-cols-2 gap-2">
+                        <div className="full-name grid grid-cols-2">
                           <div className="">
                             <label className="text-xs" for="">
                               First Name
-                            </label>
+                            </label>{" "}
                             <br />
-                            <input
-                              type="text"
-                              placeholder="John"
-                              className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                            />
+                            <small className="font-bold text-gray-500 text-xs">
+                              John
+                            </small>
                           </div>
+
                           <div className="">
                             <label className="text-xs" for="">
                               Last Name
                             </label>{" "}
                             <br />
-                            <input
-                              type="text"
-                              placeholder="Doe"
-                              className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                            />
+                            <small className="font-bold text-gray-500 text-xs">
+                              Doe
+                            </small>
                           </div>
                         </div>
 
@@ -236,11 +229,9 @@ export default function StudentDash() {
                             Email
                           </label>{" "}
                           <br />
-                          <input
-                            type="email"
-                            placeholder="123@example.com"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            johndoe@example.com
+                          </small>
                         </div>
 
                         {/* <!-- password --> */}
@@ -249,11 +240,9 @@ export default function StudentDash() {
                             Password
                           </label>{" "}
                           <br />
-                          <input
-                            type="password"
-                            placeholder="************"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            ********
+                          </small>
                         </div>
 
                         {/* <!-- phone number --> */}
@@ -262,11 +251,9 @@ export default function StudentDash() {
                             Phone Number
                           </label>
                           <br />
-                          <input
-                            type="tel"
-                            placeholder="123-345-567"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            555-5555-555
+                          </small>
                         </div>
 
                         {/* <!-- address --> */}
@@ -275,14 +262,9 @@ export default function StudentDash() {
                             Address
                           </label>{" "}
                           <br />
-                          <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            placeholder="Add Address heresrc."
-                            className="resize-none font-bold w-full p-3 mt-2 text-xs pl-3 rounded-lg bg-zinc-50 border border-zinc-200 outline-none"
-                          ></textarea>
+                          <small className="font-bold text-gray-500 text-xs">
+                            ABC Crescent, Tailwindcss Street, Somewhere on Earth
+                          </small>
                         </div>
 
                         {/* <!-- course --> */}
@@ -291,11 +273,9 @@ export default function StudentDash() {
                             Course
                           </label>{" "}
                           <br />
-                          <input
-                            type=""
-                            placeholder="123@example.com"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            UI/UX Design
+                          </small>
                         </div>
                       </form>
                     </div>
@@ -307,30 +287,26 @@ export default function StudentDash() {
                         Guardian's Form
                       </h1>
 
-                      <form action="" className="w-full">
+                      <form action="">
                         {/* <!-- full name --> */}
-                        <div className="full-name grid grid-cols-2 gap-2">
+                        <div className="full-name grid grid-cols-2">
                           <div className="">
                             <label className="text-xs" for="">
                               First Name
-                            </label>
+                            </label>{" "}
                             <br />
-                            <input
-                              type="text"
-                              placeholder="John"
-                              className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                            />
+                            <small className="font-bold text-gray-500 text-xs">
+                              Josephine
+                            </small>
                           </div>
                           <div className="">
                             <label className="text-xs" for="">
                               Last Name
                             </label>{" "}
                             <br />
-                            <input
-                              type="text"
-                              placeholder="Doe"
-                              className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                            />
+                            <small className="font-bold text-gray-500 text-xs">
+                              Doe
+                            </small>
                           </div>
                         </div>
 
@@ -340,11 +316,9 @@ export default function StudentDash() {
                             Email
                           </label>{" "}
                           <br />
-                          <input
-                            type="email"
-                            placeholder="123@example.com"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            josephine@mailie.com
+                          </small>
                         </div>
 
                         {/* <!-- phone number --> */}
@@ -353,11 +327,9 @@ export default function StudentDash() {
                             Phone Number
                           </label>
                           <br />
-                          <input
-                            type="tel"
-                            placeholder="123-345-567"
-                            className="font-bold w-full p-3 mt-2 text-xs pl-3 rounded-full bg-zinc-50 border border-zinc-200 outline-none"
-                          />
+                          <small className="font-bold text-gray-500 text-xs">
+                            333-3333-333
+                          </small>
                         </div>
 
                         {/* <!-- address --> */}
@@ -366,23 +338,9 @@ export default function StudentDash() {
                             Address
                           </label>{" "}
                           <br />
-                          <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            placeholder="Add Address heresrc."
-                            className="resize-none font-bold w-full p-3 mt-2 text-xs pl-3 rounded-lg bg-zinc-50 border border-zinc-200 outline-none"
-                          ></textarea>
-                        </div>
-                        {/* <!-- submit button --> */}
-                        <div className="mt-5">
-                          <a
-                            href="/application-submit"
-                            className="btn text-white font-semibold px-36 rounded-full"
-                          >
-                            Submit
-                          </a>
+                          <small className="font-bold text-gray-500 text-xs">
+                            ABC Crescent, Tailwindcss Street, Somewhere on Earth
+                          </small>
                         </div>
                       </form>
                     </div>
