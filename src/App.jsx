@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import AdminLogin from "./pages/AdminLogin";
 import StudentDash from "./pages/StudentDash";
 import AppSubmit from "./pages/AppSubmit";
+import AppDetails from "./pages/AppDetails";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/admin" element={<AdminLogin />} />
       <Route path="/student" element={<StudentDash />} />
       <Route path="/application-submit" element={<AppSubmit />} />
+      <Route path="/application-details" element={<AppDetails />} />
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
     </Routes>

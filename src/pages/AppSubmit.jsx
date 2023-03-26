@@ -2,7 +2,8 @@ import React from "react";
 
 export default function AppSubmit() {
   return (
-    <div className="bg-[#fafafa] w-[80%] mx-auto">
+      <div className="bg-[#fafafa] w-[80%] mx-auto">
+          
       <div className="grid grid-cols-12 gap-5">
         {/* <!-- sidebar --> */}
         <div className="col-span-1 bg-sky-400 rounded-[30px] shadow-vague h-[98vh] my-auto">
