@@ -1,6 +1,65 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import toast from "react-toastify";
+import Spinner from "../components/Spinner";
 
 export default function () {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    password2: "",
+  });
+
+  const { firstName, lastName, email, password, password2 } = formData;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || user) {
+      navigate("/student");
+    }
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (password !== password2) {
+      toast.error("Passwords do not match");
+    } else {
+      const userData = {
+        firstName,
+        lastName,
+        email,
+        password,
+      };
+
+      dispatch(register(userData));
+    }
+  };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div>
       <div class="">
@@ -22,27 +81,52 @@ export default function () {
                   Register to be eligible for application.
                 </p>
 
-                <form action="/student" class="mt-10 pb-10">
+                <form onSubmit={onSubmit} class="mt-10 pb-10">
                   <div class="mt-3">
-                    <label for="">Email</label> <br />
+                    <label for="">First Name</label> <br />
                     <input
-                      type="email"
-                      placeholder="123@example.com"
+                      type="text"
+                      name={firstName}
+                      onChange={onChange}
+                      placeholder="first name"
                       class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
                     />
                   </div>
                   <div class="mt-3">
+                    <label for="">Last Name</label> <br />
+                    <input
+                      type="text"
+                      name={lastName}
+                      onChange={onChange}
+                      placeholder="last name"
+                      class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <label for="">Email</label> <br />
+                    <input
+                      type="email"
+                      name={email}
+                      onChange={onChange}
+                      placeholder="123@example.com"
+                      class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
+                    />
+                  </div>
+
+                  {/* <div class="mt-3">
                     <label for="">Phone Number</label> <br />
                     <input
                       type="tel"
                       placeholder="123-345-456"
                       class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
                     />
-                  </div>
+                  </div> */}
                   <div class="mt-3">
                     <label for="">Password</label> <br />
                     <input
                       type="password"
+                      name={password}
+                      onChange={onChange}
                       placeholder="***********"
                       class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
                     />
@@ -51,13 +135,14 @@ export default function () {
                     <label for="">Confirm Password</label> <br />
                     <input
                       type="password"
+                      name={password2}
+                      onChange={onChange}
                       placeholder="***********"
                       class="font-bold w-11/12 p-3.5 mt-2 rounded-full bg-zinc-50 border border-zinc-200"
                     />
                   </div>
                   <div class="mt-8">
-                <button class="btn w-11/12 text-white p-5">Register</button>
-                    
+                    <button type="submit" class="btn w-11/12 text-white p-5">Register</button>
                   </div>
                 </form>
               </div>
